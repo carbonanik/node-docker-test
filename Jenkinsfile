@@ -1,9 +1,14 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'node:latest'
+    }
+
+  }
   stages {
     stage('Initialize') {
       steps {
-        sh 'git show --summary'
+        sh 'ls'
       }
     }
 
