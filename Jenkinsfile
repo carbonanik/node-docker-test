@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh 'docker compose up'
+        sh 'ls'
       }
     }
 
