@@ -9,7 +9,9 @@ pipeline {
   stages {
     stage('Initialize') {
       steps {
-        sh '''echo PATH = ${PATH}
+        sh '''sudo gpasswd -a jenkins docker
+
+echo PATH = ${PATH}
 echo M@_HOME = ${M2_HOME}
 '''
       }
