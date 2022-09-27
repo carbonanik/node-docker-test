@@ -4,7 +4,8 @@ pipeline {
     stage('dev') {
       steps {
         sh '''echo \'Hello World !..!\'
-ls'''
+ls
+node ./app/index.js'''
       }
     }
 
