@@ -4,7 +4,7 @@ pipeline {
     stage('dev') {
       steps {
         sh '''echo \'Hello World !..!\'
-ls
+docker ps -a
 node ./app/index.js'''
       }
     }
