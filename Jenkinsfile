@@ -1,11 +1,17 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'node:latest'
+      args '-v /root/.m2:/root/.m2'
+    }
+
+  }
   stages {
-    stage('dev') {
+    stage('Initialize') {
       steps {
-        sh '''echo \'Hello World !..!\'
-docker ps -a
-node ./app/index.js'''
+        sh '''echo PATH = ${PATH}
+echo M@_HOME = ${M2_HOME}
+'''
       }
     }
 
