@@ -1,11 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('Initialize') {
+    stage('Remove old') {
       steps {
-        sh 'git show --summary'
+        sh 'docker compose down'
       }
     }
-
+    stage('Rebuild & run') {
+      steps {
+        sh 'docker compose up --build -d'
+      }
+    }
   }
 }
