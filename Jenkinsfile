@@ -1,9 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:latest'
-    }
-  }
+  agent any
+  // {
+  //   docker {
+  //     image 'node:latest'
+  //   }
+  // }
   stages {
     stage('Remove old') {
       steps {
