@@ -5,6 +5,3 @@ services:
     ports:
       - 9999:9999
     container_name: node-docker
-    environment:
-      - NEW_RELIC_LICENSE_KEY=02b3d79cebe1d2a0824d04f953098597FFFFNRAL
-      - NEW_RELIC_APP_NAME="node-docker"
